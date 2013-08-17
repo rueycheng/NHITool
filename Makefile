@@ -12,6 +12,8 @@ help:
 	@echo "  ICD-9-CM_diagnosis_2001.{csv,json}"
 	@echo "  ICD-9-CM_procedure_2001.{csv,json}"
 	@echo
+	@echo "  json
+	@echo "  csv
 	@echo "  (or 'make all' for everything)"
 
 all: csv json
