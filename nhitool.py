@@ -44,16 +44,12 @@ def fix_icd9(fix_method, inputfile, outputfile):
 	n = len(row[0])
 	if n > punc_pos: code = row[0][0:punc_pos] + '.' + row[0][punc_pos:]
 	elif n == punc_pos: code = row[0]
-	else: 
-	    print >>sys.stderr, row[0]
-	    raise
+	else: raise
 
 	# column 1: Valid
 	if row[1] == 'Y': valid = 1
 	elif row[1] == 'N': valid = 0
-	else: 
-	    print >>sys.stderr, row[1]
-	    raise
+	else: raise
 
 	# column 3: Description
 	desc = re.sub(r'(?<=,)(\S)', r' \1', row[3])
