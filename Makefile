@@ -2,9 +2,11 @@ USER_AGENT = "Mozilla/5.0"
 CSV_FILE = $(patsubst %,ICD-9-CM_%.csv,diagnosis_1992 procedure_1992 diagnosis_2001 procedure_2001)
 JSON_FILE = $(patsubst %.csv,%.json,$(CSV_FILE))
 
-.PHONY: help all csv json
+TOOLS = wget csvcut csvjoin csvjson in2csv
 
-help:
+.PHONY: help check all csv json
+
+help: check
 	@echo "Available targets:"
 	@echo
 	@echo "  ICD-9-CM_diagnosis_1992.{csv,json}"
@@ -16,6 +18,13 @@ help:
 	@echo "  csv"
 	@echo "  dist"
 	@echo "  (or 'make all' for everything)"
+	@echo
+
+check:
+	@echo "Check for required tools"
+	@echo
+	@for prog in $(TOOLS); do echo -n "  $$prog: "; which $$prog; done
+	@echo
 
 all: csv json
 
