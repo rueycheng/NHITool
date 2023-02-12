@@ -12,8 +12,9 @@ help:
 	@echo "  ICD-9-CM_diagnosis_2001.{csv,json}"
 	@echo "  ICD-9-CM_procedure_2001.{csv,json}"
 	@echo
-	@echo "  json
-	@echo "  csv
+	@echo "  json"
+	@echo "  csv"
+	@echo "  dist"
 	@echo "  (or 'make all' for everything)"
 
 all: csv json
@@ -21,6 +22,11 @@ all: csv json
 csv: $(CSV_FILE)
 
 json: $(JSON_FILE)
+
+dist: ICD-9-CM.tar.gz
+
+ICD-9-CM.tar.gz: $(CSV_FILE) $(JSON_FILE)
+	tar zcvf $@ $^
 
 clean:
 	rm -f ICD-9-CM_diagnosis_*.csv ICD-9-CM_procedure_*.csv $(JSON_FILE)
