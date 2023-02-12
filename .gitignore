@@ -35,3 +35,21 @@ nosetests.xml
 .pydevproject
 
 .*.swp
+
+ICD-9-CM_diagnosis_1992.csv
+ICD-9-CM_diagnosis_1992.json
+ICD-9-CM_diagnosis_2001.csv
+ICD-9-CM_diagnosis_2001.json
+ICD-9-CM_diagnosis_2001_en.csv
+ICD-9-CM_diagnosis_2001_zh.csv
+ICD-9-CM_procedure_1992.csv
+ICD-9-CM_procedure_1992.json
+ICD-9-CM_procedure_2001.csv
+ICD-9-CM_procedure_2001.json
+ICD-9-CM_procedure_2001_en.csv
+ICD-9-CM_procedure_2001_zh.csv
+ICD-9-CM_1992.xls
+ICD-9-CM_2001-to-ICD-10-CM.xlsx
+ICD-9-CM_2001-to-ICD-10-PCS.xlsx
+ICD-9-CM_2001.xls
+ICD-9-CM.tar.gz
